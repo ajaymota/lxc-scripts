@@ -1,7 +1,7 @@
 # Initial server script for initializing users, security, etc.
 # 
 #					Copyright 2016
-# 				Ajay Mota, Global Tech LLP.
+# 				Ajay Mota, ANJ Tech LLP.
 #
 
 #!/bin/sh -e

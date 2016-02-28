@@ -2,7 +2,7 @@
 # including parts of Guacamole, LXC, Tomcat, MySQL and web panels
 # 
 #					Copyright 2016
-# 				Ajay Mota, Global Tech LLP.
+# 				Ajay Mota, ANJ Tech LLP.
 #
 
 #!/bin/sh -e
@@ -33,9 +33,14 @@ gpasswd -a default sudo
 su - default
 
 # Following commands in LXC
-# Mate install services
-sudo apt-get install software-properties-common
-sudo apt-add-repository ppa:ubuntu-mate-dev/ppa
-sudo apt-add-repository ppa:ubuntu-mate-dev/trusty-mate
-sudo apt-get update
-sudo apt-get install ubuntu-mate-core ubuntu-mate-desktop
+## Mate install services
+#sudo apt-get install software-properties-common
+#sudo apt-add-repository ppa:ubuntu-mate-dev/ppa
+#sudo apt-add-repository ppa:ubuntu-mate-dev/trusty-mate
+#sudo apt-get update
+#sudo apt-get install ubuntu-mate-core ubuntu-mate-desktop
+
+# Install ubuntu classic desktop
+sudo apt-get install ubuntu-desktop \
+	gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal 
+
