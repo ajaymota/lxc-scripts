@@ -8,13 +8,13 @@
 #!/bin/sh -e
 
 # LVM setup 1
-sudo pvcreate /dev/sdb1
+#sudo pvcreate /dev/sdb1
 
 # LVM setup 2
-sudo vgcreate lxc /dev/sdb1
+#sudo vgcreate lxc /dev/sdb1
 
 # Install LXC
-sudo apt-get install cgmanager lxc
+sudo apt-get -y install cgmanager lxc
 
 # Add lxc-usernet
 sudo echo "admin veth lxcbr0 10" >> /etc/lxc/lxc-usernet

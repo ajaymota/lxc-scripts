@@ -54,9 +54,9 @@ echo "" >> /etc/guacamole/user-mapping.xml
 echo "    <!-- Per-user authentication and config information -->" >> /etc/guacamole/user-mapping.xml
 echo "    <authorize username="admin" password="f1aa2du3">" >> /etc/guacamole/user-mapping.xml
 echo "        <protocol>vnc</protocol>" >> /etc/guacamole/user-mapping.xml
-echo "        <param name="hostname">176.9.154.6</param>" >> /etc/guacamole/user-mapping.xml
+echo "        <param name="hostname">localhost</param>" >> /etc/guacamole/user-mapping.xml
 echo "        <param name="port">5901</param>" >> /etc/guacamole/user-mapping.xml
-echo "        <param name="password">password</param>" >> /etc/guacamole/user-mapping.xml
+echo "        <param name="password">vncpass</param>" >> /etc/guacamole/user-mapping.xml
 echo "    </authorize>" >> /etc/guacamole/user-mapping.xml
 echo "" >> /etc/guacamole/user-mapping.xml
 echo "</user-mapping>" >> /etc/guacamole/user-mapping.xml

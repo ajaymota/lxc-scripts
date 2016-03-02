@@ -18,6 +18,10 @@ wget -O tigervncserver_1.6.0-3ubuntu1_amd64.deb --no-check-certificate https://b
 sudo dpkg -i tigervncserver_1.6.0-3ubuntu1_amd64.deb
 sudo apt-get -f -y install
 
+## Clean up files
+rm libjpeg-turbo-official_1.4.2_amd64.deb
+rm tigervncserver_1.6.0-3ubuntu1_amd64.deb
+
 # Configuration for TigerVNC
 ## run vncserver for password
 echo -e "vncpass\nvncpass\nn" | vncserver
@@ -37,13 +41,19 @@ unset DBUS_SESSION_BUS_ADDRESS
 xsetroot -solid grey
 vncconfig -iconic &
 
-gnome-session &
-gnome-panel &
-gnome-settings-daemon &
-metacity &
-nautilus &
-gnome-terminal &
+#gnome-session &
+#gnome-panel &
+#gnome-settings-daemon &
+#metacity &
+#nautilus &
+#gnome-terminal &
+
+#startlubuntu &
+startxfce4 &
 EOF
+
+# Switch to root
+sudo su
 
 sudo touch /etc/init.d/vncserver
 
@@ -131,6 +141,9 @@ EOF
 
 # defaults
 sudo update-rc.d vncserver defaults 99
+
+# Switch to default
+su - default
 
 # Run VNCSERVER
 vncserver
